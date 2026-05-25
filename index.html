@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>International Conference 2026</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      position: relative;
+      height: 70vh;
+      background: url('https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.45);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      background: #1f2937;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 10px 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #60a5fa;
+    }
+
+    .language-switch {
+      text-align: center;
+      padding: 15px;
+      background: white;
+    }
+
+    .language-switch button {
+      padding: 10px 20px;
+      margin: 0 5px;
+      border: none;
+      cursor: pointer;
+      background: #2563eb;
+      color: white;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .language-switch button:hover {
+      background: #1d4ed8;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+      background: white;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      color: #1e3a8a;
+      font-size: 2rem;
+    }
+
+    footer {
+      background: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hero-content">
+      <h1 id="conference-title">International Conference 2026</h1>
+      <p id="conference-subtitle">Innovation, Research and Global Collaboration</p>
+    </div>
+  </header>
+
+  <div class="language-switch">
+    <button onclick="setLanguage('es')">Español</button>
+    <button onclick="setLanguage('en')">English</button>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#about" id="nav-about">About</a></li>
+      <li><a href="#organizers" id="nav-organizers">Organizers</a></li>
+      <li><a href="#cfp" id="nav-cfp">Call for Papers</a></li>
+      <li><a href="#submissions" id="nav-submissions">Submissions</a></li>
+      <li><a href="#accommodation" id="nav-accommodation">Accommodation</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2 id="about-title">About</h2>
+    <p id="about-text">
+      This conference brings together researchers, academics and professionals from around the world to discuss innovation, sustainability and future challenges.
+    </p>
+  </section>
+
+  <section id="organizers">
+    <h2 id="organizers-title">Organizers</h2>
+    <p id="organizers-text">
+      Organized by universities, research centers and international institutions committed to academic excellence and collaboration.
+    </p>
+  </section>
+
+  <section id="cfp">
+    <h2 id="cfp-title">Call for Papers</h2>
+    <p id="cfp-text">
+      Authors are invited to submit original research papers related to innovation, tourism, sustainability, digital transformation and management.
+    </p>
+  </section>
+
+  <section id="submissions">
+    <h2 id="submissions-title">Submissions</h2>
+    <p id="submissions-text">
+      Paper submissions must be completed through the official conference platform. Templates and submission guidelines are available online.
+    </p>
+  </section>
+
+  <section id="accommodation">
+    <h2 id="accommodation-title">Accommodation</h2>
+    <p id="accommodation-text">
+      Participants can find recommended hotels and travel information near the conference venue.
+    </p>
+  </section>
+
+  <footer>
+    <p id="footer-text">International Conference 2026 - All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const translations = {
+      es: {
+        title: 'Congreso Internacional 2026',
+        subtitle: 'Innovación, Investigación y Colaboración Global',
+        about: 'Sobre el Congreso',
+        organizers: 'Organizadores',
+        cfp: 'Call for Papers',
+        submissions: 'Envíos',
+        accommodation: 'Alojamiento',
+        aboutText: 'Este congreso reúne a investigadores, académicos y profesionales de todo el mundo para debatir sobre innovación, sostenibilidad y desafíos futuros.',
+        organizersText: 'Organizado por universidades, centros de investigación e instituciones internacionales comprometidas con la excelencia académica y la colaboración.',
+        cfpText: 'Se invita a los autores a enviar trabajos originales relacionados con innovación, turismo, sostenibilidad, transformación digital y gestión.',
+        submissionsText: 'Los envíos deben realizarse a través de la plataforma oficial del congreso. Las plantillas y normas de envío están disponibles online.',
+        accommodationText: 'Los participantes podrán encontrar hoteles recomendados e información de viaje cerca del lugar del congreso.',
+        footer: 'Congreso Internacional 2026 - Todos los derechos reservados'
+      },
+      en: {
+        title: 'International Conference 2026',
+        subtitle: 'Innovation, Research and Global Collaboration',
+        about: 'About',
+        organizers: 'Organizers',
+        cfp: 'Call for Papers',
+        submissions: 'Submissions',
+        accommodation: 'Accommodation',
+        aboutText: 'This conference brings together researchers, academics and professionals from around the world to discuss innovation, sustainability and future challenges.',
+        organizersText: 'Organized by universities, research centers and international institutions committed to academic excellence and collaboration.',
+        cfpText: 'Authors are invited to submit original research papers related to innovation, tourism, sustainability, digital transformation and management.',
+        submissionsText: 'Paper submissions must be completed through the official conference platform. Templates and submission guidelines are available online.',
+        accommodationText: 'Participants can find recommended hotels and travel information near the conference venue.',
+        footer: 'International Conference 2026 - All Rights Reserved'
+      }
+    };
+
+    function setLanguage(lang) {
+      document.getElementById('conference-title').innerText = translations[lang].title;
+      document.getElementById('conference-subtitle').innerText = translations[lang].subtitle;
+
+      document.getElementById('nav-about').innerText = translations[lang].about;
+      document.getElementById('nav-organizers').innerText = translations[lang].organizers;
+      document.getElementById('nav-cfp').innerText = translations[lang].cfp;
+      document.getElementById('nav-submissions').innerText = translations[lang].submissions;
+      document.getElementById('nav-accommodation').innerText = translations[lang].accommodation;
+
+      document.getElementById('about-title').innerText = translations[lang].about;
+      document.getElementById('organizers-title').innerText = translations[lang].organizers;
+      document.getElementById('cfp-title').innerText = translations[lang].cfp;
+      document.getElementById('submissions-title').innerText = translations[lang].submissions;
+      document.getElementById('accommodation-title').innerText = translations[lang].accommodation;
+
+      document.getElementById('about-text').innerText = translations[lang].aboutText;
+      document.getElementById('organizers-text').innerText = translations[lang].organizersText;
+      document.getElementById('cfp-text').innerText = translations[lang].cfpText;
+      document.getElementById('submissions-text').innerText = translations[lang].submissionsText;
+      document.getElementById('accommodation-text').innerText = translations[lang].accommodationText;
+
+      document.getElementById('footer-text').innerText = translations[lang].footer;
+
+      document.documentElement.lang = lang;
+    }
+  </script>
+
+</body>
+</html>
